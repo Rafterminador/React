@@ -1,8 +1,14 @@
 import { useState } from "react";
-
 function Contador() {
   const [counter, setCounter] = useState(0)
-  return <button onClick={() => setCounter(counter+1)}>{counter}</button>
+  const handleClick = () => setCounter(counter+1)
+  return (
+    <div>
+      <button onClick={handleClick}>
+        +1
+      </button>
+      <div>{counter+1}</div>
+    </div>
+  ) 
 }
-
 export default Contador;
