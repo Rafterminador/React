@@ -17,7 +17,14 @@ hr {
 }
 
 h1 {
+  font-size: 30px;
+}
+
+h2 {
+  font-weight: 500;
   font-size: 25px;
+  color: #0560BC;
+  text-transform: capitalize;
 }
 
 .text-color-blue {
@@ -46,4 +53,9 @@ h1 {
 
 .content {
   background-color: #E3E9E8;
+}
+
+.card {
+  background-color: white;
+  @apply mb-8 pb-2 px-4;
 }

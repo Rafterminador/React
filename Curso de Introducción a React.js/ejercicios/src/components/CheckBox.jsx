@@ -19,9 +19,7 @@ const CheckBox = ({ props }) => {
         }
     }, [])
     return (
-        <div>
-            <button onClick={handleCheckBox}><img src={isCompleted} alt="Check Box" /> </button>
-        </div>
+        <button onClick={handleCheckBox}><img src={isCompleted} alt="Check Box" /> </button>
     )
 }
 
