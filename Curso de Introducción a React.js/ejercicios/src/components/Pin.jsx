@@ -1,26 +1,32 @@
-import React, { useState, useEffect } from 'react'
+import React from 'react'
 import pinned from "../assets/images/pinned.png"
 import notPinned from "../assets/images/not-pinned.png"
 
-const Pin = ({ props }) => {
-    const [isPinned, setIsPinned] = useState("")
-    function handlePin() {
-        if (isPinned === pinned) {
-            setIsPinned(notPinned)
+class Pin extends React.Component {
+    constructor(props) {
+        super(props)
+        let pin
+        if (this.props.props === true) {
+            pin = pinned
         } else {
-            setIsPinned(pinned)
+            pin = notPinned
+        }
+        this.state = {
+            isPinned: pin
         }
     }
-    useEffect(() => {
-        if (props === true) {
-            setIsPinned(pinned)
+    handlePin = () => {
+        if (this.state.isPinned === pinned) {
+            this.setState({ isPinned: notPinned })
         } else {
-            setIsPinned(notPinned)
+            this.setState({ isPinned: pinned })
         }
-    }, [])
-    return (
-        <button onClick={handlePin}><img src={isPinned} alt="Check Box" /> </button>
-    )
+    }
+    render() {
+        return (
+            <button onClick={this.handlePin}><img src={this.state.isPinned} alt="Check Box" /></button>
+        )
+    }
 }
 
 export { Pin }
