@@ -21,6 +21,7 @@ class Pin extends React.Component {
         } else {
             this.setState({ isPinned: pinned })
         }
+        this.props.updatePinOrder()
     }
     render() {
         return (

@@ -8,8 +8,8 @@ const styles = StyleSheet.create({
     },
 });
 class Card extends React.Component {
-    constructor(props) {
-        super(props)
+    updatePinOrder = () => {
+        this.props.updatePinOrder()
     }
     render() {
         const cardInfo = this.props.props
@@ -21,7 +21,7 @@ class Card extends React.Component {
                 </div>
                 <div className='col-span-4'>
                     <div className='flex flex-col items-end'>
-                        <Pin props={cardInfo.isPinned} />
+                        <Pin props={cardInfo.isPinned} updatePinOrder={this.updatePinOrder} />
                         <p>{cardInfo.isPinned}</p>
                         <p>{cardInfo.date}</p>
                         <p>{cardInfo.time}</p>
