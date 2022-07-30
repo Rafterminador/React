@@ -1,8 +1,10 @@
 import React from 'react'
 import pinned from "../assets/images/pinned.png"
 import notPinned from "../assets/images/not-pinned.png"
+import { PinContext } from "../pages/TaskList"
 
 class Pin extends React.Component {
+    static contextType = PinContext
     constructor(props) {
         super(props)
         let pin
@@ -21,7 +23,7 @@ class Pin extends React.Component {
         } else {
             this.setState({ isPinned: pinned })
         }
-        this.props.updatePinOrder()
+        this.context()
     }
     render() {
         return (

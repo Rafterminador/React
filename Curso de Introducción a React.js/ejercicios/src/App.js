@@ -15,11 +15,7 @@ function App() {
     <div className='content pb-16'>
       <Navbar />
       <div className="pt-8 px-4">
-        <TaskList>
-          {todos.map(todo => (
-            <TodoItem key={todo.text} data={todo} />
-          ))}
-        </TaskList>
+        <TaskList data={todos} />
         <TodoCounter />
         <TodoSearch />
         <CreateTodoButton />
