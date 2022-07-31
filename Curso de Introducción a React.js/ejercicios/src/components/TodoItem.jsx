@@ -5,7 +5,7 @@ const TodoItem = (props) => {
     return (
         <li className='grid grid-cols-8 gap-4'>
             <div>
-                <CheckBox props={props.data.completed} />
+                <CheckBox props={props.data.completed} id={props.data.id} />
             </div>
             <div className="col-span-7 card">
                 <Card props={props.data} />

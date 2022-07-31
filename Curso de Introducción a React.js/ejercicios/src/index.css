@@ -61,3 +61,8 @@ h2 {
   background-color: white;
   @apply mb-8 pb-2 px-4 h-44;
 }
+
+.completed {
+  text-decoration: line-through;
+  background-color: #1179E1;
+}

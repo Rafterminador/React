@@ -1,15 +1,18 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useContext } from 'react'
 import checkBoxFinished from "../assets/images/check-box-finished.png"
 import checkBoxEmpty from "../assets/images/check-box-empty.png"
+import { PinContext } from "../pages/TaskList"
 
-const CheckBox = ({ props }) => {
+const CheckBox = ({ props, id }) => {
     const [isCompleted, setIsCompleted] = useState("")
+    const pinContext = useContext(PinContext);
     function handleCheckBox() {
         if (isCompleted === checkBoxFinished) {
             setIsCompleted(checkBoxEmpty)
         } else {
             setIsCompleted(checkBoxFinished)
         }
+        pinContext.taskCompleted(id)
     }
     useEffect(() => {
         if (props === true) {
