@@ -23,7 +23,7 @@ class Pin extends React.Component {
         } else {
             this.setState({ isPinned: pinned })
         }
-        this.context()
+        this.context(this.props.id)
     }
     render() {
         return (

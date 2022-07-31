@@ -18,7 +18,7 @@ class Card extends React.Component {
                 </div>
                 <div className='col-span-4'>
                     <div className='flex flex-col items-end'>
-                        <Pin props={cardInfo.isPinned} />
+                        <Pin props={cardInfo.isPinned} id={cardInfo.id} />
                         <p>{cardInfo.isPinned}</p>
                         <p>{cardInfo.date}</p>
                         <p>{cardInfo.time}</p>
