@@ -1,5 +1,6 @@
 import React from 'react'
 import { TodoItem } from "../components/TodoItem"
+import Add from "../assets/images/Add.png"
 class TaskList extends React.Component {
     constructor(props) {
         super(props)
@@ -55,7 +56,7 @@ class TaskList extends React.Component {
         let taskCompleted = this.taskCompleted
         // console.log(this.state.data)
         return (
-            <>
+            <div className='relative'>
                 <h1 className='text-color-blue inline'>Inbox</h1>
                 <hr className='mt-2 mb-10' />
                 <section>
@@ -68,7 +69,10 @@ class TaskList extends React.Component {
                         </PinContext.Provider>
                     </ul>
                 </section>
-            </>
+                <div className='flex justify-end'>
+                    <img src={Add} className="h-16 fixed bottom-4" alt="Add task" />
+                </div>
+            </div>
         )
     }
 }
