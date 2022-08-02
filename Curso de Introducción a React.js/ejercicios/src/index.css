@@ -62,7 +62,7 @@ h2 {
   @apply mb-8 pb-2 px-4 h-44;
 }
 
-.completed {
-  text-decoration: line-through;
-  background-color: #1179E1;
+.card-completed {
+  background-color: #CFCECE;
+  ;
 }

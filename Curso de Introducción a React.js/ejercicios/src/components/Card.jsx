@@ -22,7 +22,7 @@ class Card extends React.Component {
         const cardInfo = this.props.props
         let status = isCompleted(cardInfo.completed)
         return (
-            <div className='grid grid-cols-12'>
+            <div className={`${status === styles.completed ? "card-completed" : ""} grid grid-cols-12 card`}>
                 <div className='col-span-8'>
                     <h2>{cardInfo.title}</h2>
                     <Text style={[styles.paragraph, status]} numberOfLines={5}>
