@@ -1,6 +1,9 @@
 import React from 'react'
 import { TodoItem } from "../components/TodoItem"
 import Add from "../assets/images/Add.png"
+import uuid from 'react-uuid'
+import { Link } from 'react-router-dom'
+
 class TaskList extends React.Component {
     constructor(props) {
         super(props)
@@ -64,13 +67,15 @@ class TaskList extends React.Component {
                         <PinContext.Provider
                             value={{ sortPin, taskCompleted }}>
                             {todos.map(todo => (
-                                <TodoItem key={todo.text} data={todo} />
+                                <TodoItem key={uuid()} data={todo} />
                             ))}
                         </PinContext.Provider>
                     </ul>
                 </section>
                 <div className='flex justify-end'>
-                    <img src={Add} className="h-16 fixed bottom-4" alt="Add task" />
+                    <Link to="/create/task" className='fixed bottom-4'>
+                        <img src={Add} className="h-16" alt="Add task" />
+                    </Link>
                 </div>
             </div>
         )

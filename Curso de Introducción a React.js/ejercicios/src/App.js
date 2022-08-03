@@ -1,10 +1,10 @@
-import { CreateTodoButton } from "./components/CreateTodoButton"
 import { TodoSearch } from "./components/TodoSearch"
 import { TodoCounter } from "./components/TodoCounter"
 import { TodoItem } from "./components/TodoItem"
 import { Navbar } from "./components/Navbar"
 import { TaskList } from "./pages/TaskList"
 import { HomePage } from "./pages/HomePage"
+import { AddTask } from "./pages/AddTask"
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 console.reportErrorsAsExceptions = false;
 const todos = [
@@ -17,18 +17,18 @@ const todos = [
 function App() {
   return (
     <div className='content pb-16'>
-      <Navbar />
-      <div className="pt-8 px-4">
-        <BrowserRouter>
+      <BrowserRouter>
+        <Navbar />
+        <div className="pt-8 px-4">
           <Routes>
             <Route path='/' element={<HomePage />} />
             <Route path='/tasks' element={<TaskList data={todos} />} />
             <Route path='/counter' element={<TodoCounter />} />
             <Route path='/search' element={<TodoSearch />} />
-            <Route path='/create/task' element={<CreateTodoButton />} />
+            <Route path='/create/task' element={<AddTask />} />
           </Routes>
-        </BrowserRouter>
-      </div>
+        </div>
+      </BrowserRouter>
     </div>
   );
 }
