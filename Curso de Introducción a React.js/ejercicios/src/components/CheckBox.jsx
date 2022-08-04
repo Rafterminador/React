@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useContext } from 'react'
+import React, { useState, useContext, useLayoutEffect } from 'react'
 import checkBoxFinished from "../assets/images/check-box-finished.png"
 import checkBoxEmpty from "../assets/images/check-box-empty.png"
 import { PinContext } from "../pages/TaskList"
@@ -14,7 +14,7 @@ const CheckBox = ({ props, id }) => {
         }
         pinContext.taskCompleted(id)
     }
-    useEffect(() => {
+    useLayoutEffect(() => {
         if (props === true) {
             setIsCompleted(checkBoxFinished)
         } else {
