@@ -1,6 +1,6 @@
 import React from 'react'
 import { TodoItem } from "../components/TodoItem"
-import Add from "../assets/images/Add.png"
+import add from "../assets/images/add.png"
 import uuid from 'react-uuid'
 import { Link } from 'react-router-dom'
 
@@ -74,7 +74,7 @@ class TaskList extends React.Component {
                 </section>
                 <div className='flex justify-end'>
                     <Link to="/create/task" className='fixed bottom-4'>
-                        <img src={Add} className="h-16" alt="Add task" />
+                        <img src={add} className="h-16" alt="Add task" />
                     </Link>
                 </div>
             </div>

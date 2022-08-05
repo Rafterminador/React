@@ -16,7 +16,7 @@ const todos = [
 ]
 function App() {
   return (
-    <div className='content pb-16'>
+    <div className='content'>
       <BrowserRouter>
         <Navbar />
         <div className="pt-8 px-4">

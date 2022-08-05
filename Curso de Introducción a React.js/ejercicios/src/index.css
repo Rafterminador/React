@@ -55,6 +55,7 @@ h2 {
 
 .content {
   background-color: #E3E9E8;
+  min-height: 100vh;
 }
 
 .card {
@@ -64,4 +65,15 @@ h2 {
 
 .card-completed {
   background-color: #CFCECE;
+}
+
+.input-task {
+  border-bottom: 1px solid #B8C5C9;
+  background-color: inherit;
+  color: #202124;
+  @apply pb-1 pl-2 text-xl w-full mr-4;
+}
+
+.input-task:focus {
+  outline: none;
 }
