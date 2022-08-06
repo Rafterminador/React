@@ -1,6 +1,6 @@
 import React from 'react'
 import { TodoItem } from "../components/TodoItem"
-import add from "../assets/images/add.png"
+import add from "../assets/images/Add.png"
 import uuid from 'react-uuid'
 import { Link } from 'react-router-dom'
 

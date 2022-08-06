@@ -68,12 +68,31 @@ h2 {
 }
 
 .input-task {
-  border-bottom: 1px solid #B8C5C9;
+  border-bottom: 2px solid #B8C5C9;
   background-color: inherit;
   color: #202124;
-  @apply pb-1 pl-2 text-xl w-full mr-4;
+  @apply pb-2 pl-2 text-xl w-full mr-4;
 }
 
 .input-task:focus {
   outline: none;
+}
+
+.input-task-add {
+  @apply p-2;
+  background-image: url(assets/images/simple-Add.png);
+  background-repeat: no-repeat;
+  text-indent: 60px;
+  background-size: auto 70%;
+  background-position: left center;
+  background-position: 20px center;
+}
+
+.input-task-note {
+  @apply p-2;
+  background-image: url(assets/images/note.png);
+  background-repeat: no-repeat;
+  text-indent: 60px;
+  background-size: auto 70%;
+  background-position: 20px center;
 }
