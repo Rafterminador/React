@@ -19,8 +19,8 @@ const AddTask = () => {
     return (
         <>
             <MuiPickersUtilsProvider utils={DateFnsUtils}>
-                <div className='grid grid-cols-2 mt-10 mb-8'>
-                    <div className='flex mr-4'>
+                <div className='grid grid-cols-5 mt-10 mb-8'>
+                    <div className='mr-4 col-span-3'>
                         <KeyboardDatePicker
                             id="date-picker"
                             value={selectedDate}
@@ -33,7 +33,7 @@ const AddTask = () => {
                             }}
                         />
                     </div>
-                    <div className='flex mr-4'>
+                    <div className='mr-4 col-span-2'>
                         <KeyboardTimePicker
                             id="date-picker"
                             value={selectedDate}
@@ -42,9 +42,8 @@ const AddTask = () => {
                             InputAdornmentProps={{ position: 'start' }}
                             InputProps={{
                                 className: "input-task",
-                                disableUnderline: true
-                            }}
-                        />
+                                disableUnderline: true,
+                            }} />
                     </div>
                 </div>
                 <div className=' mb-8'>

@@ -71,7 +71,7 @@ h2 {
   border-bottom: 2px solid #B8C5C9;
   background-color: inherit;
   color: #202124;
-  @apply pb-2 pl-2 text-xl w-full mr-4;
+  @apply pb-2 text-xl w-full mr-4;
 }
 
 .input-task:focus {
@@ -85,7 +85,7 @@ h2 {
   text-indent: 60px;
   background-size: auto 70%;
   background-position: left center;
-  background-position: 20px center;
+  background-position: 12px center;
 }
 
 .input-task-note {
@@ -94,5 +94,5 @@ h2 {
   background-repeat: no-repeat;
   text-indent: 60px;
   background-size: auto 70%;
-  background-position: 20px center;
+  background-position: 14px center;
 }
